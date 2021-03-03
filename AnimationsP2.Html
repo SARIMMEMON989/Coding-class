@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color:aqua;
+            animation-name: changecolor;
+            animation-duration: 14s;
+            animation-iteration-count: 2;
+            animation-delay: 10s;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+        }
+        @keyframes changecolor {
+            from {
+                background-color: aqua;
+            }
+            to {
+                background-color: aqua;
+            }
+        }
+
+    #box-2 {
+  width: 100px;
+  height: 100px;
+  background: aqua;
+  position: relative;
+  animation: myfirst 15s 2;
+  animation-direction: reverse;
+  /* animation-timing-function: ease-in; */
+  animation-timing-function: cubic-bezier(1, 10, 0, 1);
+}
+#box-4 {
+  width: 100px;
+  height: 100px;
+  background: aqua;
+  position: relative;
+  animation: movebox 15s 2;
+  animation-iteration-count: infinite;
+  /* animation-direction: reverse; */
+  /* animation-timing-function: ease-in; */
+  /* animation-timing-function: cubic-bezier(1, 10, 0, 1); */
+}
+#box-2:hover {
+    animation-play-state: paused;
+}
+
+@keyframes myfirst {
+  0%   { left: 0px; top: 0px;}
+  25%  {background: aqua; left: 200px; top: 0px;}
+  50%  {background: aqua; left: 200px; top: 200px;}
+  75%  {background: aqua; left: 0px; top: 200px;}
+  100% {background: aqua; left: 0px; top: 0px;}
+}
+@keyframes movebox {
+  0%   {left: 0px; top: 0px;}
+  25%  {left: 200px; top: 0px;}
+  50%  {left: 200px; top: 0px;}
+  75%  {left: 0px; top: 0px;}
+  100% {left: 0px; top: 0px;}
+}
+
+#box-3 {
+  width: 100px;
+  height: 100px;
+  background:aqua;
+  position: relative;
+  animation: mymove 3s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes mymove {
+  0% {top: 0px;}
+  100% {top: 200px; background-color: aqua;}
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- <div id="box"></div>  <br />
+    <div id="box-2"></div> <br/>
+
+    <div id="box-3"></div> -->
+    <div id="box-4"></div>
+
+</body>
+</html>
